@@ -14,7 +14,7 @@ def get_sp500_tickers():
     tickers = [row.find_all('td')[0].text.strip() for row in table.find_all('tr')[1:]]
     return tickers
 
-# Function to scrape ticker symbols from FTSE 100
+# Function to scrape ticker symbols from Wikipedia for FTSE 100
 def get_ftse100_tickers():
     url = 'https://en.wikipedia.org/wiki/FTSE_100_Index'
     resp = requests.get(url)
